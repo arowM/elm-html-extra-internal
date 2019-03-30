@@ -3,7 +3,7 @@
     "name": "arowM/elm-html-extra-internal",
     "summary": "This is a dummy package only for `arowM/html-extra`",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "exposed-modules": [
         "Batchable.Html.Extra",
         "Batchable.Html.Attributes.Extra",
