@@ -1,7 +1,6 @@
-module Batchable.Html.Events.Extra
-    exposing
-    -- ( charCode
-    ( targetValueFloat, targetValueInt, targetValueMaybe, targetValueMaybeFloat, targetValueMaybeInt
+module Batchable.Html.Events.Extra exposing
+    ( charCode
+    , targetValueFloat, targetValueInt, targetValueMaybe, targetValueMaybeFloat, targetValueMaybeInt
     , targetValueFloatParse, targetValueIntParse, targetValueMaybeFloatParse, targetValueMaybeIntParse
     , targetSelectedIndex
     , onClickPreventDefault, onClickStopPropagation, onClickPreventDefaultAndStopPropagation, onEnter, onChange
@@ -17,6 +16,8 @@ module Batchable.Html.Events.Extra
   - TODO: `code`
 
   - TODO: `KeyEvent`, `keyEvent`
+
+@docs charCode
 
 
 # Typed event decoders
@@ -66,13 +67,14 @@ import Json.Decode as Json
 -- keyEvent : Json.Decoder KeyEvent
 -- keyEvent =
 --     Json.oneOf [ Json.field "keyCode" int ]
--- It seems `elm-community/html-extra` 3.1.0 unexpectedly does not export `charCode`.
--- {-| Character code for key board events.
--- This is being deprecated, but support for DOM3 Keyboard events is not yet present in most browsers.
--- -}
--- charCode : Json.Decoder (Maybe Char)
--- charCode =
---     Extra.charCode
+
+
+{-| Character code for key board events.
+This is being deprecated, but support for DOM3 Keyboard events is not yet present in most browsers.
+-}
+charCode : Json.Decoder (Maybe Char)
+charCode =
+    Extra.charCode
 
 
 {-| Floating-point target value.
